@@ -93,7 +93,8 @@ body {
     .nav-item {
         font-size: 1.4rem;
     }
-    .nav-item:hover::after {
+    .nav-item:hover::after,
+    .nav-item::after {
         display: none;
     }
 }
