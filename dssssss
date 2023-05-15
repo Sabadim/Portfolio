@@ -1,0 +1,23 @@
+[33mcommit 2ad491e445c49a603778587a451afa6214af2991[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Mateus Sabadim <sabadim.12@gmail.com>
+Date:   Mon May 15 16:07:36 2023 -0300
+
+    Adicionando o avatar flutuante da Home
+
+[33mcommit 4b6aada81f2ee4c38cab0f9b5715678d89995d00[m
+Author: Mateus Sabadim <sabadim.12@gmail.com>
+Date:   Mon May 15 10:35:02 2023 -0300
+
+    border bottom do nav
+
+[33mcommit 9d81ba3df0505d27bb5a66a24512e7473a544a68[m
+Author: Mateus Sabadim <sabadim.12@gmail.com>
+Date:   Fri May 12 20:18:16 2023 -0300
+
+    Bug safari menu hover portable corrigido
+
+[33mcommit 3cd572382c11cb92cee82c55bcf5cf20181c1eda[m
+Author: Mateus Sabadim <sabadim.12@gmail.com>
+Date:   Fri May 12 11:07:17 2023 -0300
+
+    Primeiro Commit, adicionando pastas e arquivos, header pronto
