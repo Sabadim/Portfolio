@@ -19,9 +19,11 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #151515;
+    font-weight: bold;
     padding: 0 15%;
-    min-height: 70px;
+    height: 70px;
     font-size: 18px;
+    border-bottom: 1px solid #444444;
 }
 
 .list {
@@ -85,7 +87,7 @@ body {
         transition: 0.5s;
     }
     .list.active {
-        top: 70px;
+        top: 69px;
         right: 0;
         width: 100%;
         padding: 15px;
