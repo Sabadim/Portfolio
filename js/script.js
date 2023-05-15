@@ -1,6 +1,7 @@
 const hamburguer = document.querySelector(".hamburguer");
 const navMenu = document.querySelector(".list");
 
+// Mudança de ícone ao clicar no menu Hamburguer no mobile
 function ChangeIcon() {
     var hamburguerIcon = document.getElementById("hamburguer");
     if (hamburguerIcon.classList.contains('fa-bars')) {
@@ -15,3 +16,5 @@ function ChangeIcon() {
 
 
 }
+
+// Efeito Flip nas letras do nome
