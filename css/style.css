@@ -70,18 +70,14 @@
                 cursor: pointer;
                 transition: all 0.5s ease-in-out;
             }
-            /*Estilos do conteúdo principal*/
-            
-            main {
-                padding: 0 calc((100vw - 1280px) / 2);
-            }
             /*Bloco "Home"*/
             
             .home {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 700px;
+                margin: 100px 0;
+                padding: 0 calc((100vw - 1280px) / 2);
             }
             
             .home-left {
@@ -146,7 +142,7 @@
             }
             
             .card-front {
-                border: 4px solid #4C4347;
+                border: 3px solid #4C4347;
             }
             
             .card-back {
@@ -169,6 +165,17 @@
                 font-size: 1.5em;
                 text-align: center;
             }
+            /*Bloco "Sobre mim"*/
+            
+            .aboutme {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 100px 0;
+                background-color: #151515;
+                width: 100%;
+                height: 600px;
+            }
             /*Efeito float do avatar Home*/
             
             @keyframes float {
@@ -186,7 +193,8 @@
             
             @media (max-width: 1280px) {
                 .navbar,
-                main {
+                .home,
+                .aboutme {
                     padding: 0 calc((100vw - 900px) / 2);
                 }
                 .logo,
@@ -213,7 +221,8 @@
             
             @media (max-width: 768px) {
                 .navbar,
-                main {
+                .home,
+                .aboutme {
                     padding: 0 5%;
                 }
                 .hamburguer {
@@ -274,6 +283,9 @@
                 .card-front,
                 .card-back {
                     font-size: 8vw;
+                }
+                .card-front {
+                    border: 2px solid #4C4347;
                 }
                 .welcome {
                     font-size: 4vw;
