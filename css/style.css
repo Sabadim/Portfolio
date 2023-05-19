@@ -262,6 +262,7 @@
                 .home-left {
                     width: 100%;
                     padding: 0;
+                    margin-top: 100px;
                 }
                 .avatar-smartphone {
                     display: flex;
