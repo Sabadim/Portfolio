@@ -1,8 +1,8 @@
 // Mudança de ícone ao clicar no menu Hamburguer no mobile
-const hamburguer = document.querySelector(".hamburguer");
-const navMenu = document.querySelector(".list");
-const hamburguerIcon = document.getElementById("hamburguer-icon");
-const navLink = document.querySelectorAll('.nav-link');
+let hamburguer = document.querySelector(".hamburguer");
+let navMenu = document.querySelector(".list");
+let hamburguerIcon = document.getElementById("hamburguer-icon");
+let navLink = document.querySelectorAll('.nav-link');
 
 function ChangeIcon() {;
     if (hamburguerIcon.classList.contains('fa-bars')) {
@@ -34,7 +34,7 @@ navLink.forEach(item => {
 
 // Efeito Flip nas letras do nome
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
+    let cards = document.querySelectorAll('.card');
     let currentIndex = 0;
 
     setTimeout(() => {
