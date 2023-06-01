@@ -1,305 +1,324 @@
-            /*Estilos para toda a página */
-            
-            * {
-                scroll-behavior: smooth;
-            }
-            
-            a {
-                text-decoration: none;
-                color: inherit;
-            }
-            
-            body {
-                background-color: #1B2223;
-                color: #fff;
-                font-family: 'Raleway', sans-serif;
-            }
-            /*Estilos do header*/
-            
-            .logo {
-                font-size: 35px;
-            }
-            
-            .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 70px;
-                z-index: 999;
-                background-color: #151515;
-                font-weight: bold;
-                font-size: 18px;
-                border-bottom: 1px solid #444444;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                box-sizing: border-box;
-                padding: 0 calc((100vw - 1280px) / 2);
-            }
-            
-            .list {
-                list-style: none;
-                display: flex;
-                gap: 40px;
-            }
-            
-            .nav-item {
-                position: relative;
-                transition: 0.4s all ease;
-            }
-            
-            .nav-item:hover {
-                color: #a7a7a7;
-                transition: 0.4s all ease;
-            }
-            
-            .nav-item::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                transform: scale(0);
-                height: 2px;
-                bottom: -5px;
-                left: 0;
-                background-color: #3aa394;
-                transform-origin: center;
-                transition: transform 0.4s ease-out;
-            }
-            
-            .nav-item:hover::after {
-                transform: scaleX(1);
-                transform-origin: center
-            }
-            
-            .hamburguer {
-                display: none;
-                color: #FFF;
-                font-size: 2rem;
-                cursor: pointer;
-                transition: all 0.5s ease-in-out;
-            }
-            /*Bloco "Home"*/
-            
-            #home {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 170px 0;
-                padding: 0 calc((100vw - 1280px) / 2);
-            }
-            
-            .home-left {
-                flex: 60%;
-                height: auto;
-                padding-left: 5%;
-            }
-            
-            .welcome {
-                font-size: 30px;
-                margin: 15px 0;
-            }
-            
-            .home-right {
-                flex: 40%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .mateus-avatar {
-                max-width: 60%;
-                height: auto;
-                transform: translateX(0px);
-                animation: float 5s ease-out infinite;
-            }
-            
-            .card-container {
-                display: flex;
-                gap: 5px;
-                margin-top: 4px;
-            }
-            
-            .avatar-smartphone {
-                display: none;
-            }
-            
-            .card {
-                width: 70px;
-                height: 70px;
-                transition: transform 0.8s ease-in-out;
-                transform-style: preserve-3d;
-            }
-            
-            .card.flipped {
-                transform: rotateY(180deg);
-            }
-            
-            .card-front,
-            .card-back {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                border-radius: 10%;
-                font-family: 'Mitr', sans-serif;
-                font-size: 40px;
-                font-weight: 600;
-                backface-visibility: hidden;
-            }
-            
-            .card-front {
-                border: 3px solid #4C4347;
-            }
-            
-            .card-back {
-                transform: rotateY(180deg);
-                background-color: #3aa394;
-            }
-            
-            .btn-div {
-                display: flex;
-            }
-            
-            .button {
-                padding: 12px;
-                border: 2px solid #3aa394;
-                border-radius: 15px;
-                font-size: 1.7em;
-                text-align: center;
-            }
-            
-            .button:nth-child(2) {
-                margin: 0 5%;
-            }
-            /*Bloco "Sobre mim"*/
-            
-            #aboutme {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 100px 0;
-                background-color: #151515;
-                height: 600px;
-                padding: 0 calc((100vw - 1280px) / 2);
-            }
-            /*Efeito float do avatar Home*/
-            
-            @keyframes float {
-                0% {
-                    transform: translateY(0px);
-                }
-                50% {
-                    transform: translateY(-30px);
-                }
-                100% {
-                    transform: translateY(0px);
-                }
-            }
-            /*Estilos para telas de 1280px a 769px*/
-            
-            @media (max-width: 1280px) {
-                .navbar,
-                #home,
-                #aboutme {
-                    padding: 0 calc((100vw - 900px) / 2);
-                }
-                .card {
-                    width: 50px;
-                    height: 50px;
-                }
-                .card-front,
-                .card-back {
-                    font-size: 30px;
-                }
-                .welcome {
-                    font-size: 20px;
-                    margin: 10px 0;
-                }
-                .button {
-                    font-size: 1.2em;
-                }
-            }
-            /*Estilos para telas de 768px em diante (smartphones)*/
-            
-            @media (max-width: 768px) {
-                .navbar,
-                #home,
-                #aboutme {
-                    padding: 0 5%;
-                }
-                .hamburguer {
-                    display: block;
-                }
-                .list {
-                    position: fixed;
-                    top: -100%;
-                    width: 100%;
-                    right: 0;
-                    border-radius: 0 0 20px 20px;
-                    text-align: center;
-                    background-color: inherit;
-                    flex-direction: column;
-                    transition: 0.7s;
-                    z-index: 2;
-                }
-                .list.active {
-                    top: 69px;
-                    right: 0;
-                    width: 100%;
-                    padding: 15px;
-                }
-                .nav-item {
-                    font-size: 1.6rem;
-                    padding: 20px;
-                }
-                .nav-item:hover::after,
-                .nav-item::after {
-                    display: none;
-                }
-                .home-left {
-                    width: 100%;
-                    padding: 0;
-                    margin-top: 100px;
-                }
-                .avatar-smartphone {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: calc(100vw/7);
-                    height: calc(100vw/7);
-                }
-                .avatar-smartphone img {
-                    width: 70%;
-                }
-                #home {
-                    align-items: start;
-                    margin-top: 20%;
-                    height: auto;
-                }
-                .home-right {
-                    display: none;
-                }
-                .card {
-                    width: calc(100vw/7);
-                    height: calc(100vw/7);
-                }
-                .card-front,
-                .card-back {
-                    font-size: 8vw;
-                }
-                .card-front {
-                    border: 2px solid #4C4347;
-                }
-                .welcome {
-                    font-size: 4vw;
-                }
-                .button {
-                    width: 33vw;
-                }
-                .button i {
-                    width: 100%;
-                }
-            }
+    /*Estilos para toda a página */
+    * {
+        scroll-behavior: smooth;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    body {
+        background-color: #1B2223;
+        color: #fff;
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+    
+    /*Estilos do header*/
+    .logo {
+        font-size: 35px;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        z-index: 999;
+        background-color: #151515;
+        font-weight: bold;
+        font-size: 18px;
+        border-bottom: 1px solid #444444;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 calc((100vw - 1280px) / 2);
+    }
+    
+    .list {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+    
+    .nav-item {
+        position: relative;
+        transition: 0.4s all ease;
+    }
+    
+    .nav-item:hover {
+        color: #a7a7a7;
+        transition: 0.4s all ease;
+    }
+    
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scale(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #3aa394;
+        transform-origin: center;
+        transition: transform 0.4s ease-out;
+    }
+    
+    .nav-item:hover::after {
+        transform: scaleX(1);
+        transform-origin: center
+    }
+    
+    .hamburguer {
+        display: none;
+        color: #FFF;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    /* Fim dos Estilos do header*/
+
+
+    
+    /*Bloco "Home"*/
+    #home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 170px 0;
+        padding: 0 calc((100vw - 1280px) / 2);
+    }
+    
+    .home-left {
+        flex: 60%;
+        height: auto;
+        padding-left: 5%;
+    }
+    
+    .welcome {
+        font-weight: 400;
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    
+    .home-right {
+        flex: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mateus-avatar {
+        max-width: 60%;
+        height: auto;
+        transform: translateX(0px);
+        animation: float 5s ease-out infinite;
+    }
+    
+    .card-container {
+        display: flex;
+        gap: 5px;
+        margin-top: 4px;
+    }
+    
+    .avatar-smartphone {
+        display: none;
+    }
+    
+    .card {
+        width: 70px;
+        height: 70px;
+        transition: transform 0.8s ease-in-out;
+        transform-style: preserve-3d;
+    }
+    
+    .card.flipped {
+        transform: rotateY(180deg);
+    }
+    
+    .card-front,
+    .card-back {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 10%;
+        font-family: 'Mitr', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        backface-visibility: hidden;
+    }
+    
+    .card-front {
+        border: 3px solid #4C4347;
+    }
+    
+    .card-back {
+        transform: rotateY(180deg);
+        background-color: #3aa394;
+    }
+    
+    .btn-div {
+        display: flex;
+    }
+    
+    .button {
+        padding: 12px;
+        border: 2px solid #3aa394;
+        border-radius: 15px;
+        font-size: 1.7em;
+        text-align: center;
+    }
+    
+    .button:nth-child(2) {
+        margin: 0 5%;
+    }
+    /*Fim do Bloco "Home"*/
+
+    
+
+    /*Bloco "Sobre mim"*/
+    #aboutme {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 0;
+        background-color: #151515;
+        height: 600px;
+        padding: 0 calc((100vw - 1280px) / 2);
+    }
+    /*Fim do Bloco "Sobre mim"*/    
+
+
+
+    /*Efeito float do avatar Home*/
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-30px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    /*Fim do Efeito float do avatar Home*/
+
+
+
+    /*Estilos para telas de 1280px a 769px*/    
+    @media (max-width: 1280px) {
+        .navbar,
+        #home,
+        #aboutme {
+            padding: 0 calc((100vw - 900px) / 2);
+        }
+        .card {
+            width: 50px;
+            height: 50px;
+        }
+        .card-front,
+        .card-back {
+            font-size: 30px;
+        }
+        .welcome {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .button {
+            font-size: 1.2em;
+        }
+    }
+    /*Fim dos Estilos para telas de 1280px a 769px*/
+    
+
+
+    /*Estilos para telas de 768px em diante (smartphones)*/
+    @media (max-width: 768px) {
+        .navbar,
+        #home,
+        #aboutme {
+            padding: 0 5%;
+        }
+        .hamburguer {
+            display: block;
+        }
+        .list {
+            position: fixed;
+            top: -100%;
+            width: 100%;
+            right: 0;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+            background-color: inherit;
+            flex-direction: column;
+            transition: 0.7s;
+            z-index: 2;
+            background-color: #151515;
+        }
+        .list.active {
+            top: 69px;
+            right: 0;
+            width: 100%;
+            padding: 15px;
+        }
+        .nav-item {
+            font-size: 1.6rem;
+            padding: 20px;
+        }
+        .nav-item:hover::after,
+        .nav-item::after {
+            display: none;
+        }
+        .home-left {
+            width: 100%;
+            padding: 0;
+            margin-top: 100px;
+        }
+        .avatar-smartphone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100vw/7);
+            height: calc(100vw/7);
+        }
+        .avatar-smartphone img {
+            width: 70%;
+        }
+        #home {
+            align-items: start;
+            margin-top: 20%;
+            height: auto;
+        }
+        .home-right {
+            display: none;
+        }
+        .card {
+            width: calc(100vw/7);
+            height: calc(100vw/7);
+        }
+        .card-front,
+        .card-back {
+            font-size: 8vw;
+        }
+        .card-front {
+            border: 2px solid #4C4347;
+        }
+        .welcome {
+            font-size: 4vw;
+        }
+        .button {
+            width: 33vw;
+        }
+        .button i {
+            width: 100%;
+        }
+    }
+    /* Fim dos Estilos para telas de 768px em diante (smartphones)*/

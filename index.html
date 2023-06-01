@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Website e Portfolio Mateus Sabadim">
+    <meta name="author" content="Mateus Sabadim">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,23 +19,24 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <header class="navbar">
         <i class="fa fa fa-code logo" aria-hidden="true"></i>
-
-        <ul class="list">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#aboutme" class="nav-link">Sobre mim</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contatos</a></li>
-        </ul>
-        <div class="hamburguer">
-            <i id="hamburguer-icon" onclick="ChangeIcon()" class="fa-solid fa-bars"></i></div>
-    </nav>
+        <nav>
+            <ul class="list">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#aboutme" class="nav-link">Sobre mim</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contatos</a></li>
+            </ul>
+            <div class="hamburguer">
+                <i id="hamburguer-icon" onclick="ChangeIcon()" class="fa-solid fa-bars"></i></div>
+        </nav>
+    </header>
     <main>
         <section id="home">
             <div class="home-left">
-                <p class="welcome">OLÁ! EU SOU O</p>
-                <div class="card-container">
+                <h1 class="welcome">OLÁ! EU SOU O <span style="display: none;">MATEUS SABADIM</span></h1>
+                <div class="card-container" title="Mateus">
                     <div class="card">
                         <div class="card-front"></div>
                         <div class="card-back">M</div>
@@ -63,7 +66,7 @@
                     </div>
 
                 </div>
-                <div class="card-container">
+                <div class="card-container" title="Sabadim">
                     <div class="card">
                         <div class="card-front"></div>
                         <div class="card-back">S</div>
@@ -94,7 +97,7 @@
                     </div>
 
                 </div>
-                <p class="welcome">DESENVOLVEDOR FRONT-END / DESIGNER</p>
+                <h1 class="welcome">DESENVOLVEDOR FRONT-END / DESIGNER</h1>
                 <div class="btn-div">
                     <a href="https://www.linkedin.com/in/msabadim" target="_blank" class="button">
                         <i class="fa-brands fa-linkedin" style="color: #3aa394;"></i>
@@ -113,7 +116,7 @@
                 </div>
             </div>
             <div class="home-right">
-                <img class="mateus-avatar" src="./assets/avatar.png" alt="Caricatura de Mateus Sabadim">
+                <img class="mateus-avatar" src="./assets/avatar.png" alt="Caricatura de Mateus Sabadim" title="Caricatura de Mateus Sabadim">
             </div>
         </section>
         <section id="aboutme">

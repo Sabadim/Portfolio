@@ -12,7 +12,7 @@ function ChangeIcon() {;
     } else {
         hamburguerIcon.classList.remove("fa-xmark");
         hamburguerIcon.classList.add("fa-bars");
-        navMenu.classList.toggle('active')
+        navMenu.classList.toggle('active');
     }
 
 
@@ -21,9 +21,9 @@ function ChangeIcon() {;
 // Fechar o Menu quando clicar em qualquer item da lista
 function closeMenu() {
 
-    navMenu.classList.toggle('active');
     hamburguerIcon.classList.remove("fa-xmark");
     hamburguerIcon.classList.add("fa-bars");
+    navMenu.classList.toggle('active');
 
 };
 
