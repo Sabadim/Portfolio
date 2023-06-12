@@ -1,6 +1,8 @@
     /*Estilos para toda a página */
     * {
+        box-sizing: border-box;
         scroll-behavior: smooth;
+        margin: 0;
     }
     
     a {
@@ -9,12 +11,20 @@
     }
     
     body {
-        background-color: #1B2223;
+        background-color:#1B2223;
         color: #fff;
         font-family: 'Raleway', sans-serif;
     }
 
+    h2  {
+        text-align: center;
+        padding: 4% 0;
+        width: 100%;
+        font-weight: 400;
+        font-size: 3em;
+    }
 
+    /* Fim dos estilos para toda a página */
     
     /*Estilos do header*/
     .logo {
@@ -31,11 +41,10 @@
         background-color: #151515;
         font-weight: bold;
         font-size: 18px;
-        border-bottom: 1px solid #444444;
+        border-bottom: 2px solid #444444;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        box-sizing: border-box;
         padding: 0 calc((100vw - 1280px) / 2);
     }
     
@@ -91,6 +100,8 @@
         justify-content: center;
         margin: 170px 0;
         padding: 0 calc((100vw - 1280px) / 2);
+        height: 650px;
+
     }
     
     .home-left {
@@ -156,12 +167,13 @@
     }
     
     .card-front {
-        border: 3px solid #4C4347;
+        border: 2px solid #4C4347;
     }
     
     .card-back {
         transform: rotateY(180deg);
         background-color: #3aa394;
+        
     }
     
     .btn-div {
@@ -186,13 +198,77 @@
     /*Bloco "Sobre mim"*/
     #aboutme {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin: 100px 0;
         background-color: #151515;
-        height: 600px;
         padding: 0 calc((100vw - 1280px) / 2);
     }
+
+    #slides {
+        border: 1px solid red;
+        overflow: hidden;
+        min-width: 90%;
+    }
+    
+    .input-slider {
+        display: none;
+    }
+
+    #slide1:checked ~ #slides .slider-inner {
+        margin-left: 0;
+    }
+
+    #slide2:checked ~ #slides .slider-inner {
+        margin-left: -100%;
+    }
+
+    #slide3:checked ~ #slides .slider-inner {
+        margin-left: -200%;
+    }
+
+    #slide4:checked ~ #slides .slider-inner {
+        margin-left: -300%;
+    }
+
+    .slider-inner {
+        transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        width: 400%;
+        height: 500px;
+    }
+
+    .slide {
+        width: 25%;
+        float:left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #bullets {
+        width: 100%;
+        margin: 3%;
+        text-align: center;
+    }
+
+    #bullets label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius:100%;
+        background: #fff;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    #slide1:checked ~ #bullets label:nth-child(1),
+    #slide2:checked ~ #bullets label:nth-child(2),
+    #slide3:checked ~ #bullets label:nth-child(3),
+    #slide4:checked ~ #bullets label:nth-child(4) {
+        background: #3aa394;
+    }
+    
     /*Fim do Bloco "Sobre mim"*/    
 
 
@@ -264,9 +340,7 @@
             background-color: #151515;
         }
         .list.active {
-            top: 69px;
-            right: 0;
-            width: 100%;
+            top: 70px;
             padding: 15px;
         }
         .nav-item {
@@ -320,5 +394,21 @@
         .button i {
             width: 100%;
         }
+
+        #slide1:checked ~ #controls label:nth-child(2),
+        #slide2:checked ~ #controls label:nth-child(3),
+        #slide3:checked ~ #controls label:nth-child(4),
+        #slide4:checked ~ #controls label:nth-child(1),
+        #slide1:checked ~ #controls label:nth-last-child(2),
+        #slide2:checked ~ #controls label:nth-last-child(3),
+        #slide3:checked ~ #controls label:nth-last-child(4),
+        #slide4:checked ~ #controls label:nth-last-child(1) {
+            margin: 0;
+        }
+        #slides {
+            max-width: calc(100% - 140px);
+            margin: 0 auto;
+        }
     }
+
     /* Fim dos Estilos para telas de 768px em diante (smartphones)*/

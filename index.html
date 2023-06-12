@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="./icon.png">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/29b934d9e9.js" crossorigin="anonymous"></script>
     <title>Portfolio - Mateus Sabadim</title>
@@ -120,11 +119,48 @@
             </div>
         </section>
         <section id="aboutme">
-
+            <h2>SOBRE MIM</h2>
+            <input class="input-slider" type="radio" name="slider" id="slide1" checked>
+            <input class="input-slider" type="radio" name="slider" id="slide2">
+            <input class="input-slider" type="radio" name="slider" id="slide3">
+            <input class="input-slider" type="radio" name="slider" id="slide4">
+            <div id="slides">
+                <div class="slider-inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <span>Slide 1</span>
+                            <span>Content for Slide 1</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <span>Slide 2</span>
+                            <span>Content for Slide 2</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <span>Slide 3</span>
+                            <span>Content for Slide 3</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_4">
+                        <div class="slide-content">
+                            <span>Slide 4</span>
+                            <span>Content for Slide 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bullets">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
         </section>
     </main>
-
+    
     <script src="./js/script.js"></script>
 </body>
-
 </html>
