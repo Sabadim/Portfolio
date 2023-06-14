@@ -15,8 +15,8 @@ function ChangeIcon() {;
         navMenu.classList.toggle('active');
     }
 
-
 }
+// Fim da mudança de ícone ao clicar no menu Hamburguer no mobile
 
 // Fechar o Menu quando clicar em qualquer item da lista
 function closeMenu() {
@@ -30,7 +30,7 @@ function closeMenu() {
 navLink.forEach(item => {
     item.addEventListener('click', closeMenu);
 });
-
+// Fim do fechar o Menu quando clicar em qualquer item da lista
 
 // Efeito Flip nas letras do nome
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,3 +53,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+// Fim do efeito flip nas letras do nome
+
