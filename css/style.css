@@ -245,7 +245,6 @@
     .last-slide{
         display: flex;
         flex-direction: column;
-        padding-top: 50px;
     }
 
     .last-slide a {
@@ -355,9 +354,6 @@
             margin-bottom: 30px;
         }
 
-        iframe {
-            height: 200px;
-        }
     }
     /*Fim dos Estilos para telas de 1280px a 769px*/
     
@@ -419,6 +415,7 @@
         #contacts {
             padding: 30px 5% ;
         }
+
         .hamburguer {
             display: block;
         }
@@ -489,8 +486,8 @@
             width: 100%;
         }
 
-        #slides {
-            font-size: calc(1.5em + 1vw);
+        #slides, .slide a {
+            font-size: 5vw;
         }
 
         .slide {
@@ -498,16 +495,15 @@
         }
 
         .slide-left {
-            padding: 5%;
-            width: 100%;
-        }
-
-        .last-slide-img {
-            margin: 0;
+            width: 50vw;
+            padding: 0;
+            margin: 0 15vw 20px 15vw;
         }
 
         iframe {
-            width: 90%
+            width: 50vw;
+            height: 50vw;
+            margin: 0 15vw 20px 15vw;
         }
 
         #control-left, #control-right {
@@ -517,7 +513,7 @@
         #bullets label {
             width: 3vw;
             height: 3vw;
-            margin-right: 50px;
+            margin-right: 10vw;
         }
     }
     /* Fim dos Estilos para telas de 768px em diante (smartphones)*/
