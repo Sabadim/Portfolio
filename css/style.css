@@ -417,7 +417,7 @@
         #aboutme,  
         #projects,
         #contacts {
-            padding: 70px 5% ;
+            padding: 30px 5% ;
         }
         .hamburguer {
             display: block;
@@ -436,8 +436,9 @@
             background-color: #151515;
         }
         .list.active {
-            top: 70px;
+            top: 68px;
             padding: 15px;
+            border-bottom: 1px solid #444444;
         }
         .nav-item {
             font-size: 1.6rem;
@@ -477,12 +478,8 @@
         .card-front {
             border: 2px solid #4C4347;
         }
-        .welcome {
+        .welcome, .btn-div {
             font-size: 4vw;
-        }
-
-        .btn-div{
-            font-size: 3vw;
         }
 
         .button {
@@ -493,30 +490,34 @@
         }
 
         #slides {
-            font-size: 3.5vw;
+            font-size: calc(1.5em + 1vw);
+        }
+
+        .slide {
+            display: block;
         }
 
         .slide-left {
             padding: 5%;
-        }
-
-        .last-slide a{
-            margin: 5% auto;
-            font-size: 2.3vw;
+            width: 100%;
         }
 
         .last-slide-img {
-            margin: 1vh 0 6vh 0;
+            margin: 0;
         }
 
         iframe {
-            width: 40%;
-            height: auto;
-            padding: 0;
+            width: 90%
         }
 
         #control-left, #control-right {
-            font-size: 5vw;
+            display: none;
+        }
+
+        #bullets label {
+            width: 3vw;
+            height: 3vw;
+            margin-right: 50px;
         }
     }
     /* Fim dos Estilos para telas de 768px em diante (smartphones)*/
