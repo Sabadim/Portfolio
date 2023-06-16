@@ -62,29 +62,6 @@
         transition: 0.4s all ease;
     }
     
-    .nav-item:hover {
-        color: #a7a7a7;
-        transition: 0.4s all ease;
-    }
-    
-    .nav-item::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scale(0);
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background-color: #3aa394;
-        transform-origin: center;
-        transition: transform 0.4s ease-out;
-    }
-    
-    .nav-item:hover::after {
-        transform: scaleX(1);
-        transform-origin: center
-    }
-    
     .hamburguer {
         display: none;
         color: #fff;
@@ -93,8 +70,6 @@
         transition: all 0.5s ease-in-out;
     }
     /* Fim dos Estilos do header*/
-
-
     
     /*Bloco "Home"*/
     #home {
@@ -204,12 +179,6 @@
         font-size: 1.4rem;
         text-align: center;
     }
-
-    .button:hover .fa-brands{
-        color: #fff;
-        transition: ease-in-out 0.5s;
-        transform: scale(1.1);
-    }
     
     .button:nth-child(2) {
         margin: 0 5%;
@@ -230,7 +199,6 @@
 
     #slides {
         overflow: hidden;
-        height: 350px;
         width: 90%;
         font-size: 1.3em;
     }
@@ -289,12 +257,6 @@
         font-weight: bold;     
     }
 
-    .last-slide a:hover, .button:hover{
-        background-color: #3aa394;
-        transition: ease-in-out 0.5s;
-        transform: scale(1.1);
-    }
-
     .slide-arrow {
         display: none;
         transition: all 0.4s;
@@ -309,10 +271,6 @@
     #controls label {
         display: none;
         transition: all 0.4s;
-    }
-
-    #controls label:hover {
-        color: #3aa394;
     }
 
     #slide1:checked ~ #controls label:nth-child(2),
@@ -374,14 +332,14 @@
     /*Estilos para telas de 1280px a 769px*/    
     @media (max-width: 1280px) {
         .navbar{
-                padding: 0px calc((100vw - 900px) / 2);
+                padding: 0px calc((100vw - 769px) / 2);
         }
 
         #home,
         #aboutme,
         #projects,
         #contacts {
-            padding: 70px calc((100vw - 900px) / 2);
+            padding: 70px calc((100vw - 769px) / 2);
         }
 
         .card {
@@ -406,22 +364,82 @@
         #slides {
             font-size: 1em;
         }
+
+        .last-slide-img {
+            margin-bottom: 50px;
+        }
+
+        #slide1:checked ~ #controls label:nth-child(2),
+        #slide2:checked ~ #controls label:nth-child(3),
+        #slide3:checked ~ #controls label:nth-child(4),
+        #slide4:checked ~ #controls label:nth-child(1),
+        #slide1:checked ~ #controls label:nth-last-child(1),
+        #slide2:checked ~ #controls label:nth-last-child(4),
+        #slide3:checked ~ #controls label:nth-last-child(3),
+        #slide4:checked ~ #controls label:nth-last-child(2){
+        margin-top: -220px;
+        }
+
     }
     /*Fim dos Estilos para telas de 1280px a 769px*/
     
+    /*Estilos em telas superiores a 769px*/
+    @media (min-width: 769px) {
 
+        .button:hover .fa-brands{
+            color: #fff;
+            transition: ease-in-out 0.5s;
+            transform: scale(1.1);
+        }
+
+        .nav-item:hover {
+            color: #a7a7a7;
+            transition: 0.4s all ease;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scale(0);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3aa394;
+            transform-origin: center;
+            transition: transform 0.4s ease-out;
+        }
+        
+        .nav-item:hover::after {
+            transform: scaleX(1);
+            transform-origin: center
+        }
+
+        .last-slide a:hover, .button:hover{
+            background-color: #3aa394;
+            transition: ease-in-out 0.5s;
+            transform: scale(1.1);
+        }
+
+        #controls label:hover {
+        color: #3aa394;
+    }
+    }
+
+    /*Fim dos Estilos em telas superiores a 768px*/
 
     /*Estilos para telas de 768px em diante (smartphones)*/
     @media (max-width: 768px) {
+
         .navbar{
             padding: 0px 5%;
         }
 
         #home,
-        #aboutme,
+        #aboutme,  
         #projects,
         #contacts {
-            padding: 70px 5%;
+            padding: 70px 5% ;
         }
         .hamburguer {
             display: block;
@@ -446,10 +464,6 @@
         .nav-item {
             font-size: 1.6rem;
             padding: 20px;
-        }
-        .nav-item:hover::after,
-        .nav-item::after {
-            display: none;
         }
         .home-left {
             width: 100%;
@@ -501,8 +515,7 @@
         }
 
         #slides {
-            height: 50vw;
-            font-size: 2.5vw;
+            font-size: 3vw;
         }
 
         .slide-left {
@@ -513,6 +526,25 @@
             width: 40%;
             height: auto;
             padding: 0;
+        }
+
+        .last-slide-img {
+            margin-bottom: 10vh;
+        }
+
+        #controls {
+            width: 100vw;
+        }
+
+        #slide1:checked ~ #controls label:nth-child(2),
+        #slide2:checked ~ #controls label:nth-child(3),
+        #slide3:checked ~ #controls label:nth-child(4),
+        #slide4:checked ~ #controls label:nth-child(1),
+        #slide1:checked ~ #controls label:nth-last-child(1),
+        #slide2:checked ~ #controls label:nth-last-child(4),
+        #slide3:checked ~ #controls label:nth-last-child(3),
+        #slide4:checked ~ #controls label:nth-last-child(2){
+        margin-top: -25vh;
         }
 
     }
