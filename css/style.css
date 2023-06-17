@@ -242,6 +242,10 @@
         padding: 30px;
     }
 
+    iframe {
+        margin: 0 30px;
+    }
+
     .last-slide{
         display: flex;
         flex-direction: column;
@@ -398,6 +402,10 @@
         #control-right label:hover, #control-left label:hover {
         color: #3aa394;
         }
+
+        .slide_4 p {
+            margin-top: 100px;
+        }
     }
 
     /*Fim dos Estilos hover em telas superiores a 768px*/
@@ -501,8 +509,6 @@
         }
 
         iframe {
-            width: 50vw;
-            height: 50vw;
             margin: 0 15vw 20px 15vw;
         }
 
