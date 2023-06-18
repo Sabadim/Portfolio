@@ -17,7 +17,7 @@
     }
     h2  {
         text-align: center;
-        margin: 40px ;
+        padding: 40px;
         width: 100%;
         font-weight: 400;
         font-size: 3em;
@@ -313,14 +313,54 @@
 
     /* Bloco "Projetos"*/
     #projects {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: 1000px;
         padding: 70px calc((100vw - 1280px) / 2);
+        width: 100%;
+    }
+
+    .projects-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .project-box {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 200px;
+        border: 2px solid #3aa394;
+        border-radius: 20px;
+        margin: 50px 0;
+        font-size: 2.5em;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 600;
+        z-index: 1;
+        transition: all 0.5s ease-in-out
+    }
+
+    .project-box p {
+        width: 100%;
+        background-color: rgba(68,68,68,0.4);
+        position: relative;
     }
 
     /*Fim do bloco "Projetos"*/ 
+
+    /* Bloco "Contatos"*/
+    #contacts {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #151515;
+        padding: 70px calc((100vw - 1280px) / 2);
+    }
+
+    /* Fim do Bloco "Contatos"*/
 
     /*Estilos para telas de 1280px a 769px*/    
     @media (max-width: 1280px) {
@@ -357,6 +397,7 @@
         .last-slide-img {
             margin-bottom: 30px;
         }
+
 
     }
     /*Fim dos Estilos para telas de 1280px a 769px*/
@@ -406,6 +447,30 @@
         .slide_4 p {
             margin-top: 100px;
         }
+
+        .project-box:hover {
+            transform: scale(1.2);
+        }
+
+        .project-box p::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color:#3aa394;
+            transition: width 0.8s ease;
+            z-index: -1;
+            }
+        
+            .project-box:hover p::after {
+            width: 100%
+            }
+
+            .project-box:nth-child(2) {
+                margin: 50px 20px;
+            }
     }
 
     /*Fim dos Estilos hover em telas superiores a 768px*/
@@ -520,6 +585,16 @@
             width: 3vw;
             height: 3vw;
             margin-right: 10vw;
+        }
+
+        .projects-container {
+            flex-direction: column;
+        }
+
+        .project-box {
+            width: 50vw;
+            height: 30vw;
+            font-size: 6vw;
         }
     }
     /* Fim dos Estilos para telas de 768px em diante (smartphones)*/
