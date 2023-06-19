@@ -348,19 +348,47 @@
         position: relative;
     }
 
-    /*Fim do bloco "Projetos"*/ 
+    /*Fim do bloco "Projetos"*/
 
-    /* Bloco "Contatos"*/
-    #contacts {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+    /*Rodapé*/
+
+    .footer-div {
+        width: 100%;
         background-color: #151515;
-        padding: 70px calc((100vw - 1280px) / 2);
+        border-top: 2px solid #444444;
+        font-size: 1em;
+        line-height: 1.5;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px calc((100vw - 1280px) / 2);
     }
 
-    /* Fim do Bloco "Contatos"*/
+    .footer-link{
+        color: #4de4cd;
+        font-weight: 800;
+    }
+
+    .footer-up{
+        font-size: 2em;
+        animation: move 1.2s infinite ease-in-out;
+        margin-right: 50px;
+    }
+
+    @keyframes move{
+        0% {
+            margin-top:0;
+        }
+        50% {
+            margin-top:20px;
+        }
+        100% {
+            margin-top:0;
+        }
+    }
+
+    /* Fim do Rodapé */
 
     /*Estilos para telas de 1280px a 769px*/    
     @media (max-width: 1280px) {
@@ -370,8 +398,7 @@
 
         #home,
         #aboutme,
-        #projects,
-        #contacts {
+        #projects{
             padding: 70px calc((100vw - 769px) / 2);
         }
 
@@ -397,12 +424,15 @@
         .last-slide-img {
             margin-bottom: 30px;
         }
-
+        
+        .footer-div {
+            padding: 30px calc((100vw - 769px) / 2);
+        }
 
     }
     /*Fim dos Estilos para telas de 1280px a 769px*/
     
-    /*Estilos hover em telas superiores a 769px*/
+    /*Estilos só em telas superiores a 769px*/
     @media (min-width: 769px) {
 
         .button:hover .fa-brands{
@@ -412,7 +442,7 @@
         }
 
         .nav-item:hover {
-            color: #a7a7a7;
+            color: #aaa;
             transition: 0.4s all ease;
         }
         
@@ -442,6 +472,7 @@
 
         #control-right label:hover, #control-left label:hover {
         color: #3aa394;
+        transform: scale(1.5);
         }
 
         .slide_4 p {
@@ -464,28 +495,29 @@
             z-index: -1;
             }
         
-            .project-box:hover p::after {
+        .project-box:hover p::after {
             width: 100%
-            }
+        }
 
-            .project-box:nth-child(2) {
-                margin: 50px 20px;
-            }
+        .project-box:nth-child(2) {
+            margin: 50px 20px;
+        }
+        
     }
 
-    /*Fim dos Estilos hover em telas superiores a 768px*/
+    /*Fim dos Estilos só em telas superiores a 768px*/
 
     /*Estilos para telas de 768px em diante (smartphones)*/
     @media (max-width: 768px) {
 
-        .navbar{
+        .navbar, .footer-div{
             padding: 0px 5%;
         }
 
         #home,
         #aboutme,  
         #projects,
-        #contacts {
+        .footer-div {
             padding: 30px 5% ;
         }
 
@@ -595,6 +627,14 @@
             width: 50vw;
             height: 30vw;
             font-size: 6vw;
+        }
+
+        .footer-div{
+            font-size: 2.5vw;
+        }
+
+        .footer-up{
+            margin: 0;
         }
     }
     /* Fim dos Estilos para telas de 768px em diante (smartphones)*/
