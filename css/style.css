@@ -597,6 +597,7 @@
 
         .slide {
             display: block;
+            text-align: center;
         }
 
         .slide-left {
@@ -633,6 +634,7 @@
             width: 70vw;
             height: 50vw;
             font-size: 6vw;
+            margin: 20px 0;
         }
 
         .footer-div{
