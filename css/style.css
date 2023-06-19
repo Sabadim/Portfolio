@@ -224,7 +224,7 @@
     }
 
     .slider-inner {
-        transition:ease-in-out 1s;
+        transition:ease-in-out 0.7s;
         width: 400%;
         height: 100%;
         display: flex;
@@ -605,12 +605,18 @@
             margin: 0 15vw 20px 15vw;
         }
 
-        iframe {
-            margin: 0 15vw 20px 15vw;
+        #control-left {
+            position:absolute;
+            left: 10px;
         }
 
-        #control-left, #control-right {
-            display: none;
+        #control-right {
+            position:absolute;
+            right: 10px;
+        }
+
+        iframe{
+            padding-bottom: 20px;
         }
 
         #bullets label {
@@ -624,17 +630,17 @@
         }
 
         .project-box {
-            width: 50vw;
-            height: 30vw;
+            width: 70vw;
+            height: 50vw;
             font-size: 6vw;
         }
 
         .footer-div{
-            font-size: 2.5vw;
+            font-size: 3.5vw;
         }
 
         .footer-up{
-            margin: 0;
+            margin: 10px;
         }
     }
     /* Fim dos Estilos para telas de 768px em diante (smartphones)*/
