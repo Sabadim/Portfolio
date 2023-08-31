@@ -90,7 +90,7 @@
     
     .welcome {
         font-weight: 400;
-        font-size: 30px;
+        font-size: 26px;
         margin: 15px 0;
     }
     
@@ -240,6 +240,10 @@
     .slide-left {
         width: 35%;
         padding: 30px;
+    }
+
+    .avatar-img {
+        border-radius: 50%;
     }
 
     iframe {
@@ -413,7 +417,7 @@
         }
 
         .welcome {
-            font-size: 20px;
+            font-size: 18px;
             margin: 10px 0;
         }
 
